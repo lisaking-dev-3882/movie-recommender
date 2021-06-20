@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MovieDemo {
 
 	public static void main(String[] args) {
-		
+		///fff
 		String genre1 = "Comedy";
 		String genre2 = "Animation";
 		String genre3 = "Drama";
