@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class MovieDemo {
 
 	public static void main(String[] args) {
-		
+	
 		String genre1 = "Comedy";
 		String genre2 = "Animation";
 		String genre3 = "Drama";
@@ -19,7 +19,7 @@ public class MovieDemo {
 		String choice = input.nextLine();
 		int movieChoice = Integer.parseInt(choice);
 		
-		
+		//Getting choice from user
 		if (movieChoice == 1){
             System.out.println("Comedy: Zoolander, Superbad, and Bridesmaids" + "\n");  
                }  else if (movieChoice == 2) {
