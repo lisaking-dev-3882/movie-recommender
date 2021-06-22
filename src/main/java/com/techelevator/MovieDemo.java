@@ -16,21 +16,21 @@ public class MovieDemo {
 		System.out.println("Pick a favorite movie genre" + "\n");
 		System.out.println("Choose from number 1, 2, or 3:" + "\n");
 		System.out.println("1.) " + genre1 + "\n" + "2.) " + genre2 + "\n" + "3.) " + genre3 + "\n");
+		System.out.print("Enter choice: ");
 		String choice = input.nextLine();
 		int movieChoice = Integer.parseInt(choice);
 
 		// Getting choice from user
 		setActors(movieChoice);
 
-		Scanner scan = new Scanner(System.in);
 		System.out.println("Which actor/actress do you want to see in a " + actors.getGenre() + "\n");
 		System.out.println("Choose from number 1, 2, 3, or 4:" + "\n");
 		System.out.println("1.) " + actors.getActorOne() + "\n" + "2.) " + actors.getActorTwo() + "\n" + "3.) "
 				+ actors.getActorThree() + "\n" + "4.) " + actors.getActorFour() + "\n");
-		String ActorChoice = scan.nextLine();
+		System.out.print("Enter choice: ");
+		String ActorChoice = input.nextLine();
 		getActorChoice(ActorChoice, actors.getGenre());
 
-		scan.close();
 		input.close();
 	}
 
@@ -38,15 +38,14 @@ public class MovieDemo {
 		int actorNum = Integer.parseInt(ActorChoice);
 
 		if (genre.equals(genre1)) {
-			actors.printComedyMovies(actorNum);
+			actors.printMovies(actorNum);
 		} else if (genre.equals(genre2)) {
-			actors.printAnimatedMovies(actorNum);
+			actors.printMovies(actorNum);
 		} else if (genre.equals(genre3)) {
-			actors.printDramaMovies(actorNum);
+			actors.printMovies(actorNum);
 		} else {
 			System.out.println("Sorry that isn't a correct number");
 		}
-
 	}
 
 	private void setActors(int movieChoice) {
